@@ -17,6 +17,7 @@
 
 ## Hubbers/Xubbers talking about related ideas
 
+* [standup yml template from `@some-natalie` and `@imjohnbo`](https://gist.github.com/some-natalie/aff399da984211721619aa8f067ae509)
 * [Xubber `@haacked` talking about house chores on GitHub in 2014!](https://haacked.com/archive/2014/06/30/github-issues-saved-my-marriage/)
 * [COO `@kdaigle` talking about why and how to take and plan a personal retreat](https://www.kyledaigle.com/its-time-for-your-think-week/)
 * [Engineering Operations Director `@benbalter` writes about how to manage like an engineer](https://ben.balter.com/2023/01/10/manage-like-an-engineer/)
