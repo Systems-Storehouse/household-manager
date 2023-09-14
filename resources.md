@@ -1,9 +1,10 @@
 # Resources
 
-## Books
+## Books We Recommend
 
 * [Fair Play](https://www.fairplaylife.com/the-book) by Eva Rodsky
 * [The 80/80 Marriage](https://www.8080marriage.com/) by Nate and Kaley Klemp
+* [Getting Things Done](https://www.amazon.com/Getting-Things-Done-Stress-Free-Productivity/dp/0143126563) by David Allen
 
 ## Media
 
