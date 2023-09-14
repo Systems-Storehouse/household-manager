@@ -1,0 +1,37 @@
+name: Weekly standup
+
+on:
+  schedule:
+    - cron: "0 23 * * 6"  # Saturday at 11 pm UTC (which is in the afternoon in the US)
+  workflow_dispatch:
+
+jobs:
+  weekly_meeting:
+    name: create new issue
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set Date
+      run: echo "date=$(date -u '+%B %d %Y')" >> $GITHUB_ENV
+
+    - name: Create issue
+
+     # Get the title, labels, assignees, and body of the issue template at the path
+      uses: imjohnbo/extract-issue-template-fields@v1
+      id: extract
+      with:
+        path: .github/ISSUE_TEMPLATE/weekly.md
+
+    # Create new issue with assignees, labels, title, and body
+    - uses: imjohnbo/issue-bot@v3
+      id: create-issue
+      with:
+        assignees: ${{ steps.extract.outputs.assignees }}
+        labels: ${{ steps.extract.outputs.labels }}
+        title: ${{ steps.extract.outputs.title }}
+        body: ${{ steps.extract.outputs.body }}
+        date: ${{ env.assignees }}
+        pinned: true
+        close-previous: true
+
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
