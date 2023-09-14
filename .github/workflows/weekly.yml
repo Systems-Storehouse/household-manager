@@ -2,7 +2,7 @@ name: Weekly standup
 
 on:
   schedule:
-    - cron: "0 23 * * 6"  # Saturday at 11 pm UTC (which is in the afternoon in the US)
+    - cron: "0 12 * * 6"  # Saturday at noon
   workflow_dispatch:
 
 jobs:
@@ -14,7 +14,6 @@ jobs:
       run: echo "date=$(date -u '+%B %d %Y')" >> $GITHUB_ENV
 
     - name: Create issue
-
      # Get the title, labels, assignees, and body of the issue template at the path
       uses: imjohnbo/extract-issue-template-fields@v1
       id: extract
@@ -25,13 +24,13 @@ jobs:
     - uses: imjohnbo/issue-bot@v3
       id: create-issue
       with:
-        assignees: ${{ steps.extract.outputs.assignees }}
-        labels: ${{ steps.extract.outputs.labels }}
-        title: ${{ steps.extract.outputs.title }}
-        body: ${{ steps.extract.outputs.body }}
-        date: ${{ env.assignees }}
+        assignees: "skymob, lizzysoltis"
+        labels: "standup"
         pinned: true
         close-previous: true
+        linked-comments: true
+        title: ${{ steps.extract.outputs.title }}
+        body: ${{ steps.extract.outputs.body }}
 
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
