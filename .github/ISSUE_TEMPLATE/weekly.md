@@ -1,7 +1,7 @@
 ---
 name: Weekly Standup
 about: Template for a weekly household standup meeting.
-title: "Weekly Standup {{ date | date('dddd, MMMM Do') }}"
+title: "Weekly Standup"
 ---        
 
 ## Retrospective

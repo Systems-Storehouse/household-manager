@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Set Date
-      run: echo "date=$(date -u '+%B %d %Y')" >> $GITHUB_ENV
+      run: echo "TODAY=$(date -u '+%B %d %Y')" >> $GITHUB_ENV
 
     - name: Create issue
      # Get the title, labels, assignees, and body of the issue template at the path
@@ -29,7 +29,7 @@ jobs:
         pinned: true
         close-previous: true
         linked-comments: true
-        title: ${{ steps.extract.outputs.title }}
+        title: "${{ steps.extract.outputs.title }} - ${{ env.TODAY }}"
         body: ${{ steps.extract.outputs.body }}
 
       env:
