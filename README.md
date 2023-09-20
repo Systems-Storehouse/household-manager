@@ -8,7 +8,7 @@ Provide a framework and tooling to help facilitate running your home, using GitH
 
 ## Contributing
 
-Pull requests and issues welcome!
+Pull requests and issues welcome! If you have an general idea that isn't yet ready for an issue or feature request, please submit this via an [Idea Discussion](https://github.com/Systems-Storehouse/household-manager/discussions/new/choose).
 
 ## Thank Yous 
 
